@@ -34,6 +34,7 @@ Tengo entendido que esta segunda entrega debía ser un modelo no tan funcional p
 El mismo artículo utilizó cuatro métricas, Accuracy, Precision, Recall y F1 Score, esto para evaluar cada uno de sus modelos y así determinar cual satisfacia la necesidad de una manera más integra. El estudio utilizó la misma metodología de validación y test para identificar la posibilidad de overfit dentro de los modelos.
 
 ## Reportar resultados 
-
+Para el reporte de resultados, utilicé lo que aprendí en clase, una matriz de confusión, que aunque se ve un poco saturado por la distribución (son 14 clases), se puede utilizar para observar el desempeño del modelo. El modelo inicial sobresale en la detección de tulipanes, y presenta buenos resultados con girasoles, iris, dientes de leon y corepsis. Aunque sí confunde flores que tienen algunos rasgos parecidos, justamente confunde algunos coreopsis con dientes de leon, puesto que ambos comparten el color y la forma, pero si mis steps fueran más grandes, considero que podría determinar que el coreopsis tiene pétalos más largos.
+También utilicé sklearn para crear un reporte de clasificación, en el que calcula algunas métricas como precision, recall y f1 para medir estos valores por clase.
 
 
