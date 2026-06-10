@@ -98,7 +98,9 @@ En cuanto a métricas, a continuación se desglosa en una tabla las métricas qu
 | Macro F1        | 0.70               | 0.81                | 11 puntos  |
 
 ## Resultados
-La versión mejorada del modelo sí es superior a la versión anterior, por un margen razonable. Mi modelo que estoy utilizando como inicial es vastamente superior al primer modelo que implementé, pero estaba creado a partir de decisiones arbitrarias y sin fundamento en documentos relevantes. Asimismo se aumentaron los datos de ambos modelos en un inició, y por lo mismo no se consideró el aumento como una mejora. 
+La versión mejorada del modelo sí es superior a la versión anterior, por un margen razonable. El modelo que estoy utilizando como inicial es vastamente superior al primer modelo que implementé, pero este modelo realmente inicial estaba creado a partir de decisiones arbitrarias y sin fundamento en documentos relevantes. Asimismo se aumentaron los datos de ambos modelos en un inicio, y por lo mismo no se consideró el aumento como una mejora, aunque en un principio no existiera ningún tipo de mejora orientada a los datos.
+Este modelo implementado con transfer learning fue un reto que disfruté desarrollar, ya que además de afianzar mi relación con mi ser querido, me dió la oportunidad de aprender sobre un tema que está en auge estos últimos días.
+Le doy las gracias a mi profesor por guiarme en este proyecto y por permitirme aprender sobre temas tan interesantes.
 
 ## Referencias
 Agrawal, S., Datta, R., Pal, A. R., Angione, C., & Krishnasamy, K. (2026). Comparative analysis of CNN-based approaches for flower classification. Smart Agricultural Technology, 14, 102213. [https://doi.org/10.1016/j.atech.2026.102213](https://doi.org/10.1016/j.atech.2026.102213)
