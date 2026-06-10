@@ -17,7 +17,7 @@ Las carpetas se encuentran en mi [Drive](https://drive.google.com/drive/folders/
 La técnica de escalamiento que se utilizó fue transformar las dimensiones de los colores de RGB que son intervalos de 0 a 255, a intervalos que son de 0 a 1.
 
 ## Preprocesamiento de datos
-El preprocesado que se le dio a los datos fue uno muy estándar, puesto que el propio dataset estaba ya balanceado, pero sí existe cierto bias hacia los tulipanes, esto hizo que el preprocesado de datos fuera necesario, especialmente al hacerle data augmentation.
+El preprocesado que se le dio a los datos fue uno muy estándar, puesto que el propio dataset está un poco balanceado, sí existen desbalances, pero esto se puede arreglar posteriormente, pero sí existe cierto desbalance hacia los tulipanes, esto hizo que el preprocesado de datos fuera necesario, especialmente al hacerle data augmentation y considerar otras estrategias.
 Esta mejora en los datos se refiere a la alteración del brillo, contraste y voltear en el eje x las imagenes, este augmentation sí proporcionó una diferencia notable en el rendimiento del modelo.
 
 
@@ -32,7 +32,7 @@ Para la implementación del modelo me apoyé mucho en el paper antes mencionado,
 ![](EstructuraFlorank.png)
 
 ### Funciones de pérdida e hiperparámetros
-Su función de pérdida es sparse categorical cross entropy, esto porque mis etiquetas son números enteros y no un vector como se utiliza en categorical cross entropy. 
+Su función de pérdida es sparse categorical cross entropy, esto porque mis etiquetas son números enteros y no un vector como se utiliza en categorical cross entropy, mejorando el rendimiento al calcular un número en lugar de un vector. 
 
 | Hiperparámetro                   | Valor |
 | -------------------------------- | ----- |
@@ -45,14 +45,15 @@ Está primera iteración de los hiperparámetros fue mediante un cálculo para a
 
 ## Seleccionar métricas adecuadas
 El mismo artículo utilizó cuatro métricas, Accuracy, Precision, Recall y F1 Score, esto para evaluar cada uno de sus modelos y así determinar cual satisfacia la necesidad de una manera más integra. El estudio utilizó la misma metodología de validación y test para identificar la posibilidad de overfit dentro de los modelos.
+### Evaluación inicial
 Al graficar el accuracy de training y validation podemos determinar si un modelo está overfiteado, a continuación se encuentran las gráficas de accuracy y de pérdida.
 ![](accInicial.png)
 
 En la gráfica de accuracy debemos ver un incremento gradual hacia el número 1, mientras que en la de pérdida se debe acercar al número 0.
-En este caso podemos ver que el accuracy del entrenamiento se posiciona en 0.76, es decir, el 76% de las veces que una flor sea presentada ante el modelo va a ser determinado correctamente. En cuanto al accuracy en validación, podemos ver que se mantiene en el mismo valor (0.77), esto implica que el modelo es tan bueno al entrenar como al examinarse internamente. Al probarlo con test, el resultado final es de 0.71, esta varianza se debe a la cantidad de elementos que existen, puesto que solo hay 7 elementos por clase. Además de que podemos utilizar el F1 para determinar casos especiales en los que no le atina ni individualmente ni en conjunto con las demás clases.
+En este caso podemos ver que el accuracy del entrenamiento se posiciona en 0.76, es decir, el 76% de las veces que una flor sea presentada ante el modelo va a ser determinado correctamente. En cuanto al accuracy en validación, podemos ver que se mantiene en el mismo valor (0.77), esto implica que el modelo es tan bueno al entrenar como al examinarse internamente. Al probarlo con test, el resultado final es de 0.71, esta varianza se debe a la cantidad de elementos que existen, puesto que solo hay 7 elementos por clase. Además de que podemos utilizar el F1 para determinar casos especiales en los que no le atina ni individualmente ni en conjunto con las demás clases. Para nuestro caso, las clases con mayor rendimiento fueron: el tulipan, el iris, y la margarita amarilla, estos tienen el valor de F1 más alto, que a su vez podemos determinar que tienen características suficientemente diferentes como para que el modelo las identifique. Por el contrario, la calendula, margarita y el clavel.
 
 ![](resumenInicial.png)
-Eso sí al observar la matriz de confusión y las métricas noté un poco de desbalance en cuanto a las clases, hay algunas clases super puestas ante otras, especialmente la margarita y la calendula. 
+Eso sí al observar la matriz de confusión y las métricas noté un poco de desbalance en cuanto a las clases, hay algunas clases super puestas ante otras, y esto confirma la teoría de que debemos centrarnos en el clavel, margarita y calendula. 
 
 ![](confusionInicial.png)
 
@@ -91,3 +92,7 @@ En cuanto a métricas, a continuación se desglosa en una tabla las métricas qu
 
 ## Resultados
 La versión mejorada del modelo sí es superior a la versión anterior, por un margen razonable. Mi modelo que estoy utilizando como inicial es vastamente superior al primer modelo que implementé, pero estaba creado a partir de decisiones arbitrarias y sin fundamento en documentos relevantes. Asimismo se aumentaron los datos de ambos modelos en un inició, y por lo mismo no se consideró el aumento como una mejora. 
+
+## Referencias
+Agrawal, S., Datta, R., Pal, A. R., Angione, C., & Krishnasamy, K. (2026). Comparative analysis of CNN-based approaches for flower classification. Smart Agricultural Technology, 14, 102213. [https://doi.org/10.1016/j.atech.2026.102213](https://doi.org/10.1016/j.atech.2026.102213)
+
