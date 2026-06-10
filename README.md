@@ -1,6 +1,9 @@
 # FlorANK
 Mi proyecto de Inteligencia artificial que busca solucionar un problema de mi novia. Ella no sabe mucho de flores y siempre que ve una se pregunta que flor es, este modelo busca satisfacer su curiosidad y aunque es complicado contemplar todas las flores que existen, con unas cuantas se puede empezar.
 
+#### Disclaimer
+Por motivos de peso, los archivos [FlorAnk.keras](https://drive.google.com/file/d/19cGIrZy5z4RPCpjZOyndbgOaoGddOTjR/view?usp=drive_link) (modelo final) y [FlorAnkInicial](https://drive.google.com/file/d/1xIS1WcRm5OpAUjBmwdhVP5nsiYry9UxW/view?usp=drive_link) (modelo inicial) están disponibles haciendo clic en estos enlaces. 
+
 ----
 
 # Primera entrega
