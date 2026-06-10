@@ -40,6 +40,7 @@ Su función de pérdida es sparse categorical cross entropy, esto porque mis eti
 | Optimizador                      | Adam  |
 | Steps de entrenamiento por época | 80    |
 | Steps de validación              | 20    |
+
 Está primera iteración de los hiperparámetros fue mediante un cálculo para asegurar que en cada época hubiera imágenes nuevas, porque en su momento pensé que sería una buena idea, pero después de ver la matriz de confusión determiné que para la mejora, uno de los puntos más importantes sería aumentar estos steps.
 
 ## Seleccionar métricas adecuadas
