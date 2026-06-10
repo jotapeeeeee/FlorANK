@@ -4,6 +4,10 @@ Mi proyecto de Inteligencia artificial que busca solucionar un problema de mi no
 #### Disclaimer
 Por motivos de peso, los archivos [FlorAnk.keras](https://drive.google.com/file/d/19cGIrZy5z4RPCpjZOyndbgOaoGddOTjR/view?usp=drive_link) (modelo final) y [FlorAnkInicial](https://drive.google.com/file/d/1xIS1WcRm5OpAUjBmwdhVP5nsiYry9UxW/view?usp=drive_link) (modelo inicial) están disponibles haciendo clic en estos enlaces. 
 
+## Uso
+Para usar el modelo, debimos haber descargado dos archivos, el modelo que se encuentra en los enlaces de arriba y descargar el archivo: "ambiente_de_prueba", deberemos ubicar en la misma carpeta ambos archivos y dentro de Google Drive deberemos tener esta estructura de carpetas: "/content/drive/MyDrive/8vo/data/Flowers/usage", en esta última carpeta "usage", deberemos insertar imágenes que queramos clasificar, ya sean plantas, personas, flores, etcétera. Y aunque este modelo está orientado en su totalidad a la clasificación de plantas, es muy entretenido ver que flor eres segun el modelo.
+Con fotos dentro de la carpeta de usage, es que podemos empezar a ejecutar el proyecto (ambiente_de_prueba), se deben ejecutar todas las celdas en un orden descendente, esto permitirá que el programa aplique los filtros necesarios a las imágenes que carguemos, además de asegurar un buen funcionamiento.
+
 ----
 
 # Primera entrega
